@@ -1,6 +1,6 @@
-# AUTH-SERVICE
+# TypeScript Backend Setup
 
-Auth Service is a robust authentication service built from scratch using Node.js and PostgreSQL. It provides essential authentication features such as user registration, login, and session management.
+A clean and modern TypeScript backend setup with Express.js, featuring robust logging, middleware infrastructure, and utility functions. This project provides a solid foundation for building scalable backend applications.
 
 ![Last Commit](https://img.shields.io/badge/last%20commit-march-blue)
 ![Language](https://img.shields.io/badge/typescript-100%25-blue)
@@ -15,10 +15,6 @@ Auth Service is a robust authentication service built from scratch using Node.js
 ![Express](https://img.shields.io/badge/-Express-black?logo=express)
 ![dotenv](https://img.shields.io/badge/-dotenv-8DD6F9?logo=dotenv)
 ![Nodemon](https://img.shields.io/badge/-Nodemon-76D04B?logo=nodemon)
-![Redis](https://img.shields.io/badge/-Redis-DC382D?logo=redis&logoColor=white)
-![Prisma](https://img.shields.io/badge/-Prisma-080A2E?logo=prisma&logoColor=white)
-![Postgres](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
-![AWS S3](https://img.shields.io/badge/-AWS_S3-569A31?logo=amazon-aws&logoColor=white)
 ![Winston Logger](https://img.shields.io/badge/-Winston_Logger-F05A22?logo=logstash&logoColor=white)
 
 ---
@@ -39,21 +35,21 @@ Auth Service is a robust authentication service built from scratch using Node.js
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/auth-service.git
+   git clone https://github.com/your-username/typescript-backend-setup.git
    ```
 2. Navigate to the project directory:
    ```
-   cd auth-service
+   cd typescript-backend-setup
    ```
 3. Install dependencies:
    ```
-   npm install
+   yarn install
    ```
 4. Create a `.env` file in the root directory and configure your environment variables.
 
 5. Build the application:
    ```
-   npm run build
+   yarn build
    ```
 
 ## Usage
@@ -61,65 +57,72 @@ Auth Service is a robust authentication service built from scratch using Node.js
 To start the application, run:
 
 ```
-npm start
+yarn start
 ```
 
 For development with auto-reloading:
 
 ```
-npm run dev
+yarn dev
 ```
 
 ## Features
 
-- User registration
-- User login
-- Session management
-- etc.
+- **Express.js Server Setup** - Clean and modular Express application structure
+- **TypeScript Configuration** - Full TypeScript support with proper type definitions
+- **Logging System** - Winston and Morgan logging for comprehensive application monitoring
+- **Middleware Infrastructure** - Ready-to-use middleware for authentication, error handling, and security
+- **Utility Functions** - Common utility functions for API responses and error handling
+- **Configuration Management** - Centralized configuration management
+- **Development Tools** - Hot reloading with nodemon for efficient development
 
 ## Technologies
 
-- Node.js
-- Express
-- TypeScript
-- PostgreSQL
-- Prisma
-- JSON Web Tokens (JWT)
-- bcryptjs
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web application framework
+- **TypeScript** - Type-safe JavaScript
+- **Winston** - Logging library
+- **Morgan** - HTTP request logger middleware
+- **dotenv** - Environment variable management
+- **nodemon** - Development server with auto-reload
 
 ## Project Structure
 
 ```
-auth-service/
-├── docs/              # Project documentation
-├── prisma/            # Prisma models and migration files
-├── scripts/           # Utility scripts
+typescript-backend-setup/
 ├── src/               # Main source code
 │   ├── config/        # Configuration files
-│   ├── controllers/   # Request handlers
-│   ├── db/            # Database setup and models
-│   ├── docs/          # swagger documentation
-│   ├── logger/        # Logging functionality
-│   ├── middlewares/   # Middleware for authentication and validation
-│   ├── routes/        # API routes
-│   ├── schemas/       # Request validation schemas
-│   ├── service/       # Business logic
-│   ├── types/         # TypeScript types
-│   ├── utils/         # Utility functions
-│   ├── validators/    # Input validation functions
-│   ├── app.ts         # Entry point for the application
-│   └── constants.ts   # Application constants
-│   └── index.ts       # Starting point of project
+│   ├── logger/        # Logging functionality (Winston & Morgan)
+│   ├── middlewares/   # Middleware for authentication, error handling, and security
+│   ├── types/         # TypeScript type definitions
+│   ├── utils/         # Utility functions for API responses and error handling
+│   ├── app.ts         # Express application setup
+│   ├── constants.ts   # Application constants
+│   └── index.ts       # Application entry point
 ├── .env               # Environment variables
 ├── package.json       # Project dependencies and scripts
 ├── tsconfig.json      # TypeScript configuration
+├── yarn.lock          # Yarn lock file
 └── README.md          # Project documentation
-
 ```
 
 ## Configuration
 
-Create a `.env.development` file in the root directory, copy the [`.env.sample`](.env.sample) file set value according to your environment
+Create a `.env` file in the root directory with the following variables:
+
+```env
+NODE_ENV=development
+PORT=3000
+LOG_LEVEL=info
+```
+
+## Available Scripts
+
+- `yarn dev` - Start development server with hot reload
+- `yarn build` - Build the TypeScript application
+- `yarn start` - Start the production server
+- `yarn lint` - Run ESLint for code quality
+- `yarn test` - Run tests (if configured)
 
 ## Contributing
 
