@@ -25,7 +25,7 @@ import { errorHandler } from "./middlewares/error.middlewares.js";
 import { ApiResponse } from "./utils/ApiResponse.js";
 
 app.get("/api/v1/healthcheck", (req: Request, res: Response) => {
-	res.status(200).json(new ApiResponse(200, {}, "Server is running"));
+	res.status(200).json(new ApiResponse(200, {}, "Server is running."));
 });
 
 // if endpoint not found
