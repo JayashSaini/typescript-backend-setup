@@ -45,7 +45,7 @@ A clean and modern TypeScript backend setup with Express.js, featuring robust lo
    ```
    yarn install
    ```
-4. Create a `.env` file in the root directory and configure your environment variables.
+4. Create a `.env.development` file in the root directory and configure your environment variables.
 
 5. Build the application:
    ```
@@ -85,36 +85,6 @@ yarn dev
 - **Morgan** - HTTP request logger middleware
 - **dotenv** - Environment variable management
 - **nodemon** - Development server with auto-reload
-
-## Project Structure
-
-```
-typescript-backend-setup/
-├── src/               # Main source code
-│   ├── config/        # Configuration files
-│   ├── logger/        # Logging functionality (Winston & Morgan)
-│   ├── middlewares/   # Middleware for authentication, error handling, and security
-│   ├── types/         # TypeScript type definitions
-│   ├── utils/         # Utility functions for API responses and error handling
-│   ├── app.ts         # Express application setup
-│   ├── constants.ts   # Application constants
-│   └── index.ts       # Application entry point
-├── .env               # Environment variables
-├── package.json       # Project dependencies and scripts
-├── tsconfig.json      # TypeScript configuration
-├── yarn.lock          # Yarn lock file
-└── README.md          # Project documentation
-```
-
-## Configuration
-
-Create a `.env` file in the root directory with the following variables:
-
-```env
-NODE_ENV=development
-PORT=3000
-LOG_LEVEL=info
-```
 
 ## Available Scripts
 
