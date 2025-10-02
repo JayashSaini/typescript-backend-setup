@@ -22,7 +22,11 @@ const colors = {
 winston.addColors(colors);
 
 // Custom format for HTTP logs to highlight status codes with custom colors
+<<<<<<< HEAD
 const httpFormat = winston.format.printf(info => {
+=======
+const httpFormat = winston.format.printf((info) => {
+>>>>>>> 9665c33f44110a26e74df37aa59eaab17984e9f1
 	const { statusCode, message, timestamp } = info;
 	let statusMessage = message;
 
